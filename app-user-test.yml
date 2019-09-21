@@ -1,0 +1,37 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /
+    session:
+      timeout: 300
+  tomcat:
+    uri-encoding: UTF-8
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: app-user
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      key01: value01
+      key02: value02
+      key03: value03
+
+#配置actuator显示健康信息
+management:
+  endpoint:
+    health:
+      show-details: always #总是显示详细信息
+  endpoints:
+    web:
+      exposure:
+        include: '*'  #开放所有actuator端口，查询所有状态健康信息
