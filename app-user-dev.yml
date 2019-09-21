@@ -22,7 +22,7 @@ eureka:
   instance:
     prefer-ip-address: true
     metadata-map:
-      key01: value01
+      key01: '${cipher}AQCThsiDCsDMKSwaC6YU95k/VOgxWtGQpW9KZqpv9XYsij2IJ7/qerSl10EbWP4PBRL+caiDg0odt0cVswe8kCs/t52ZwGjnDbeyxqvHbLbjtkSyUgGnkuAqUsvqdDNUyIQgsEOvAECvEZa5RrXjMgoVvOl3T3mHxOGq3A+QIAqFmfH6Fi/ukmcJN/TM5zlv8qf8Ajcek7O/66CZ4iAa4+4CeyfnxBiQsh3mxoW9S6O55w+PrfSPB18nO+H0uyHaDrFxGnd1C9BeDAFA+XDhxRVq058x+5n/1K4/zxzUAielRUnj7H6j56MDKjMW3lXZlDMebCDpCXnEa0bgHrRj6x0CcTeJvZKGEgfN9xdcolPEi8hBFartfhIekM3dAt44uAg='
       key02: value02
       key03: value03
 
