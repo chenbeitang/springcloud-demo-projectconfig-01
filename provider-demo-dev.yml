@@ -1,0 +1,44 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /
+    session:
+      timeout: 300
+  tomcat:
+    uri-encoding: UTF-8
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: provider-demo
+  rabbitmq:
+    host: 192.168.164.129
+    port: 5672
+    username: guest
+    password: guest
+  zipkin:
+    base-url: http://localhost:9411
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      key01: '{cipher}AQCThsiDCsDMKSwaC6YU95k/VOgxWtGQpW9KZqpv9XYsij2IJ7/qerSl10EbWP4PBRL+caiDg0odt0cVswe8kCs/t52ZwGjnDbeyxqvHbLbjtkSyUgGnkuAqUsvqdDNUyIQgsEOvAECvEZa5RrXjMgoVvOl3T3mHxOGq3A+QIAqFmfH6Fi/ukmcJN/TM5zlv8qf8Ajcek7O/66CZ4iAa4+4CeyfnxBiQsh3mxoW9S6O55w+PrfSPB18nO+H0uyHaDrFxGnd1C9BeDAFA+XDhxRVq058x+5n/1K4/zxzUAielRUnj7H6j56MDKjMW3lXZlDMebCDpCXnEa0bgHrRj6x0CcTeJvZKGEgfN9xdcolPEi8hBFartfhIekM3dAt44uAg='
+      key02: value02
+      key03: value03-2-2-3-4
+
+#配置actuator显示健康信息
+management:
+  endpoint:
+    health:
+      show-details: always #总是显示详细信息
+  endpoints:
+    web:
+      exposure:
+        include: '*'  #开放所有actuator端口，查询所有状态健康信息
